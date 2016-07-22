@@ -1,8 +1,8 @@
 {
-    "name": "product-management",
+    "name": "movie-rental",
     "version": "1.0.0",
-    "author": "Deborah Kurata",
-    "description": "Package for the Acme Product Management sample application",
+    "author": "Alin Ciocan",
+    "description": "Movie rental application with calculation for how much to pay and how many points you have earned",
     "scripts": {
         "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
         "tsc": "tsc",
@@ -11,7 +11,7 @@
         "typings": "typings",
         "postinstall": "typings install"
     },
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "angular2": "2.0.0-beta.15",
         "systemjs": "0.19.26",
