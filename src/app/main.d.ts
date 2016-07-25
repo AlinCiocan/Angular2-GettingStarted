@@ -1,1 +1,3 @@
-declare var __moduleName;
+declare var module {
+    id:string
+};

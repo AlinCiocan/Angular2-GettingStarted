@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { MovieComponent, MoviesComponent, MoviesService, MovieModel } from "./movie/index";
+
 
 @Component({
-   // moduleId: module.id,
-    selector: 'app-component',
-    templateUrl: `app/app.component.html`
+    selector: "app-component",
+    templateUrl: "app/app.component.html",
+    directives: [MovieComponent, MoviesComponent],
+    providers: [MoviesService]
 })
 export class AppComponent implements OnInit {
-    name: string = "Andrei 222";
+    
+    
+    
+    constructor(private _moviesService: MoviesService) { 
 
-    constructor() { }
+        
+    }
 
-    ngOnInit() { }
+    ngOnInit() { 
+        var movies = this._moviesService.getMovies();
+        console.log(movies);
+    }
 
 }
