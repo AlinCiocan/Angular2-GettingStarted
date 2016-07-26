@@ -4,12 +4,13 @@
     "author": "Alin Ciocan",
     "description": "Movie rental application with calculation for how much to pay and how many points you have earned",
     "scripts": {
-        "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+        "start": "concurrently \"npm run tsc:w\" \"npm run lite\" \"npm run build-sass\" ",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
         "lite": "lite-server",
         "typings": "typings",
-        "postinstall": "typings install"
+        "postinstall": "typings install",
+        "build-sass": "node-sass -w app/assets/styles/sass -o app/assets/styles/css"
     },
     "license": "MIT",
     "dependencies": {
@@ -34,7 +35,8 @@
         "concurrently": "^2.0.0",
         "lite-server": "^2.2.0",
         "typescript": "^1.8.10",
-        "typings": "^1.0.4"
+        "typings": "^1.0.4",
+        "node-sass": "^3.8.0"
     },
     "repository": {}
 }

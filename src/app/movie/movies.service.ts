@@ -3,13 +3,23 @@ import { MovieModel } from "./movie.model";
 
 @Injectable()
 export class MoviesService {
-    constructor() { }
+    private _movies: MovieModel[];
 
-    public getMovies() {
-        return [
+
+    constructor() { 
+        this._movies = [
             new MovieModel("Hercules"),
             new MovieModel("Django"),
             new MovieModel("Finding Nemo")
         ];
+    }
+
+    public getMovies() {
+        return this._movies.slice();
+    }
+
+
+    public addMovie(movie:MovieModel) {
+        this._movies.push(movie);
     }
 }

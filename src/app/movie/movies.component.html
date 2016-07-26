@@ -1,4 +1,5 @@
 <ul>
-    <li> Movie 1</li>
-    <li> Movie 2</li>
+    <li *ngFor="let movie of _movies">
+        {{movie.title}}
+    </li>
 </ul>

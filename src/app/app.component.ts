@@ -10,11 +10,7 @@ import { MovieComponent, MoviesComponent, MoviesService, MovieModel } from "./mo
 })
 export class AppComponent implements OnInit {
     
-    
-    
     constructor(private _moviesService: MoviesService) { 
-
-        
     }
 
     ngOnInit() { 

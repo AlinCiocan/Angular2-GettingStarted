@@ -1,1 +1,5 @@
-<button (click)="addMovie()"> Add movie </button>
+<div class="add-movie">
+    <input (keypress.enter)="addMovie()" type="text" class="add-movie__movie-title"/>
+    <button (click)="addMovie()"  class="add-movie__button"> Add movie </button>
+</div>
+
